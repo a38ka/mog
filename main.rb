@@ -2,4 +2,8 @@
 #encoding:utf-8
 
 print "Program Start...."
-print ""
+
+command = nil
+
+print "#{command}"
+
