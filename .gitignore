@@ -1,0 +1,7 @@
+/.bundle
+vendor/bundle
+*.swp
+*~
+.project
+.DS_Store
+

@@ -1,13 +1,19 @@
 #!/usr/bin/env ruby
 #encoding:utf-8
 
-print "Program Start....\n"
+require 'mechanize'
+agent = Mechanize.new
+Encoding.default_external = 'UTF-8'
+agent.user_agent_alias = 'Windows Mozilla'
+url = "http://chat.chat-w.com/24/enter"
 
-command = nil
+page = agent.get(url)
+#:name => 'f_in'
+#:name => 'msg_color'
+#:text => 'YellowGreen'
+#:name => 'name_color'
+#:text => 'Chocolate'
+#name = "椎茸ver1"
 
-print "#{command}"
-
-print "|東|南|西|北|發|白|中|\n"
-print "|牌|牌|牌|牌|牌|牌|牌|\n"
-print "|壱|二|三|四|五|六|七|八|九|\n"
-print "|萬|萬|萬|萬|萬|萬|萬|萬|萬|\n"
+page.frame_with(:name => 'input')
+p page.forms
